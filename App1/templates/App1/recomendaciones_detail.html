@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="{% static 'App1/assets/img/icon.png' %}" />
+    <link href="{% static 'App1/css/style.css' %}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    
+    <title>Bruno food</title>
+    
 
 </head>
 <body style="background-color: #ff912b8a;">
@@ -30,16 +37,19 @@
             {% endif %}
         </div>
     </nav>
-
-<ul>
-<li><h2>Nombre del restaurante: {{recomendaciones.Nombre}}</h2></li>
-<li><h6>Localizacion del restaurante: {{recomendaciones.Localizacion}}</h6></li>
-<li><h6>Categoria del restaurante: {{recomendaciones.Categoria}}</h6></li>
-<li><h6>Especialidad del restaurante: {{recomendaciones.Especialidad}}</h6></li>
-<li><h6>Reseña del restaurante: {{recomendaciones.Reseña}}</h6></li>
-<img  src="{{recomendaciones.imagen.url}}" class="card2-img" alt="No hay imagen." width="400px" height="400px">
-</ul>
-
+    <div class="card text-bg-dark">
+        <img src="{% static 'App1/assets/img/banner2.jpg' %}" class="card-img" alt="...">
+        <div class="card-img-overlay" id="text-img3" >
+        <ul style="color: black;">
+        <li><h2>Nombre del restaurante: {{recomendaciones.Nombre}}</h2></li>
+        <li><h6>Localizacion del restaurante: {{recomendaciones.Localizacion}}</h6></li>
+        <li><h6>Categoria del restaurante: {{recomendaciones.Categoria}}</h6></li>
+        <li><h6>Especialidad del restaurante: {{recomendaciones.Especialidad}}</h6></li>
+        <li><h6>Reseña del restaurante: {{recomendaciones.Reseña}}</h6></li>
+        <img  src="{{recomendaciones.imagen.url}}"  alt="No hay imagen." width="600px" height="400px">
+        </ul>
+        </div>
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
