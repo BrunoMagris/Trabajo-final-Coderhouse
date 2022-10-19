@@ -1,0 +1,29 @@
+{% extends "App1/padre.html" %}
+{% block titulo %}
+<h1>Los restaurantes son</h1>
+{% endblock %}
+
+
+{% block info %}
+<p class="card-text ">
+{% for restaurante in object_list %}
+<li style="list-style: none;"><h3> Nombre: {{restaurante.Nombre}}</h3></li>
+<button class="btn btn-dark">
+<a style="color: white;" href="{% url 'DetalleResaurantes' restaurante.id %}">Ver Detalles</a>
+<a style="color: white;" href="{% url 'UpdateResaurantes' restaurante.id %}">Actualizar</a>
+{% if request.user.is_staff %}
+<a style="color: white;" href="{% url 'BorrarResaurantes' restaurante.id %}">Borrar</a>
+{% endif %}
+</button>
+{% endfor %}
+
+ <a class="btn btn-dark" href="{% url 'CrearResaurantes' %}">Crear</a>   
+
+</p>
+<div class="container-fluid" id="buscador">
+    <form class="d-flex" role="search" action="/App1/buscar/" method="GET"> {% csrf_token %}
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="Categoria" id="Categoria" style="background-color: #ffdcbbaf;">
+      <input class="btn btn-dark" type="submit" value="buscar">>
+    </form>
+  </div>
+{% endblock %}

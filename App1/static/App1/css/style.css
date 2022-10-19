@@ -1,0 +1,79 @@
+/* BANNER */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-img{
+    height: 900px;
+}
+
+#text-img {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    margin: -25px 0 0 -25px;
+    width: 50%;
+    color: black;
+}
+
+#text-img h5{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+#text-img p{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.card2-img{
+    height: 50px;
+}
+
+
+/*  BANNER RECOMENDACIONES  */
+
+.text-img2 {
+    margin: auto;
+}
+
+.text-img2 h5 {
+    margin-top: 10px !important;
+}
+
+/*  BUSCADOR INPUT  */
+
+#Categoria {
+    opacity: 0.5;
+}
+#Categoria:hover {
+    opacity: 1;
+}
+
+/*  HOME */
+
+#cont-home {
+    display: flex;
+    margin: 100px;
+    margin-left: 300px;
+}
+
+.cont-tex{
+    margin-left: 100px;
+    padding-top: 100px;
+}
+
+.cont-tex h5 {
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 100px;
+    color: #061a5c;
+}
+
+.cont-tex p {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 30px;
+    color: #061a5c;
+}

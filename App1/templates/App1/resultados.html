@@ -1,0 +1,17 @@
+{% extends "App1/padre.html" %}
+{% block titulo %}
+
+    <p>Estas buscando Restaurantes de la Categoria: {{busqueda}}</p>
+
+    {% for restaurante in restaurantes %}
+        <ul>
+            <li><h4> Nombre del restaurante: {{restaurante.Nombre}}</h4></li>
+            <li>Localizacion del restaurante: {{restaurante.Localizacion}}</li>
+            <li>Categoria del restaurante: {{restaurante.Categoria}}</li>
+            <li>Especialidad del restaurante: {{restaurante.Especialidad}}</li>
+            <li>Reseña del restaurante: {{restaurante.Reseña}}</li>
+
+        </ul>
+    
+    {% endfor %}
+{% endblock %}

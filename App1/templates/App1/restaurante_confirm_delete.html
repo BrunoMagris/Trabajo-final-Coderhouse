@@ -1,0 +1,6 @@
+<form action="" method="POST"> {% csrf_token %}
+
+    <p>Estás seguro de que quieres borrar {{restaurante.nombre}}?</p>
+
+    <input type="submit" value="Confirmar">
+</form>

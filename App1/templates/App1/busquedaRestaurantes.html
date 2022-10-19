@@ -1,0 +1,10 @@
+{% extends "App1/padre.html" %}
+{% block titulo %} 
+<div class="container-fluid" id="buscador">
+    <form class="d-flex" role="search" action="/App1/buscar/" method="GET"> {% csrf_token %}
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="Categoria" id="Categoria">
+      <input type="submit" value="buscar">>
+    </form>
+  </div>
+
+{% endblock %}
