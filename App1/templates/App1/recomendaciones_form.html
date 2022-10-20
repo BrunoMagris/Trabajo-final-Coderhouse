@@ -31,7 +31,9 @@
         </div>
     </nav>
 
-    <form action="" method="POST" class="m-4"> {% csrf_token %}
+
+
+     <form action="" enctype="multipart/form-data" method="POST" class="m-4"> {% csrf_token %}
         <div class="mb-3">
             <label for="id_Nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="Nombre" maxlength="60" autofocus="" required id="id_Nombre" style="opacity:0.5 ;">
@@ -50,14 +52,16 @@
         </div>
         <div class="mb-3">
             <label for="id_Reseña" class="form-label">Reseña</label>
-            <input type="text" class="form-control" name="Reseña" maxlength="60" autofocus="" required id="id_Reseña" style="opacity:0.5 ;">
+            <input type="text" class="form-control" name="Reseña" maxlength="200" autofocus="" required id="id_Reseña" style="opacity:0.5 ;">
         </div>
         <div class="mb-3">
-            <label for="id_Imagen" class="form-label">Imagen</label>
-            <input type="file" class="form-control" name="Imagen" accept="image/*" required id="id_Imagen" style="opacity:0.5 ;">
+            <label for="id_imagen" class="form-label">Imagen</label>
+            <input type="file" class="form-control" name="imagen" accept="image/*" required id="id_imagen" style="opacity:0.5 ;">
         </div>
         <button type="submit" class="btn btn-dark">Enviar</button>
-    </form>
+    </form>  
+
+
 
 </body>
 </html>
